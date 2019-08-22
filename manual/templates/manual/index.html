@@ -1,0 +1,11 @@
+{% if output %}
+    <ul>
+    {% for action in output %}
+        <!-- <li><a href="/manual/{{ action.id }}/">{{ action.action_name }}</a></li> -->
+        <li><a href="{% url 'detail' action.id %}">{{ action.action_name }}</a></li>
+
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
