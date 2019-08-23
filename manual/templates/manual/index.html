@@ -1,11 +1,15 @@
+
+<h1>{{ "gme" }}</h1>
+
 {% if output %}
     <ul>
     {% for action in output %}
         <!-- <li><a href="/manual/{{ action.id }}/">{{ action.action_name }}</a></li> -->
-        <li><a href="{% url 'detail' action.id %}">{{ action.action_name }}</a></li>
+        <li><a href="{% url 'manual:detail' action.id %}">{{ action.action_name }}</a></li>
 
     {% endfor %}
     </ul>
+
 {% else %}
-    <p>No polls are available.</p>
+    <p>No equipment are available.</p>
 {% endif %}

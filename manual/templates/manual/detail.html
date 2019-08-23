@@ -1,1 +1,16 @@
-##
+
+
+
+{% if output %}
+
+    <ul>
+    {% for equipment in output %}
+
+        <li><a href="{% url 'manual:vote' equipment.id %}">{{ equipment.equipment_yes }}</a></li>
+    {% endfor %}
+    </ul>
+
+
+{% else %}
+    <p>No equipment are available.</p>
+{% endif %}

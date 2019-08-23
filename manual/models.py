@@ -15,7 +15,7 @@ class ACTION(models.Model):
         return self.action_name
 
 class EQUIPMENT(models.Model):
-    equipment_name = models.CharField(max_length=200)
+    equipment_yes = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.action_name
+        return self.equipment_yes
